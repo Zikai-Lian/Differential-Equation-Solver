@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice — Steps &amp; Slopes</title>
+<meta name="description" content="Randomly generated differential equations practice problems, graded against an independent numerical check.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell narrow">
+  <header class="masthead">
+    <div class="masthead-text">
+      <h1>Practice</h1>
+      <p>Randomly generated problems with a guaranteed closed-form answer, graded against an independent numerical integration — a way to practice, not just to check your own work.</p>
+    </div>
+    <div class="masthead-side">
+      <span class="masthead-tag">5 categories</span>
+      <nav class="site-nav" aria-label="Section">
+        <a href="index.html">Solver</a>
+        <a href="practice.html" class="active">Practice</a>
+      </nav>
+      <div class="theme-switch" role="group" aria-label="Theme">
+        <button type="button" data-theme-choice="system" class="active">System</button>
+        <button type="button" data-theme-choice="light">Light</button>
+        <button type="button" data-theme-choice="dark">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel practice-controls">
+    <div class="field">
+      <label><span>Category</span></label>
+      <select id="categorySelect"></select>
+    </div>
+    <button type="button" class="solve-btn" id="newProblemBtn">New problem</button>
+    <span class="practice-score" id="scoreDisplay"></span>
+  </div>
+
+  <main id="problemArea" style="margin-top: 18px;"></main>
+
+  <footer class="app-footer">
+    <span>Steps &amp; Slopes Practice — graded against independent RK4 integration, not against the solver's own output.</span>
+    <span>Math rendered with MathJax.</span>
+  </footer>
+</div>
+
+<script id="mathjax-config">
+  window.MathJax = {
+    startup: { typeset: false },
+    svg: { fontCache: 'global' },
+    tex: { packages: { '[+]': [] } }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" id="mathjax-script"></script>
+
+<script src="js/mathengine.js"></script>
+<script src="js/odesolvers.js"></script>
+<script src="js/site.js"></script>
+<script src="js/practice.js"></script>
+</body>
+</html>
